@@ -1,13 +1,11 @@
-name: 'Hola mundo App Workflow'
-on: 
+name: Hola mundo App Workflow
+on:
   push:
     branches:
       - main
-      - aprendiendo-github-actions
   pull_request:
     branches:
       - main
-      - aprendiendo-github-actions
   paths:
     - 'src/**'
     - '**.yml'
