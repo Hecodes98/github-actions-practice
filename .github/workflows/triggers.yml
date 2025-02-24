@@ -1,5 +1,5 @@
-name: Hola mundo App Workflow
-run-name: ¡Estoy aprendiendo GitHub Actions!
+name: Tres diferentes eventos
+run-name: ¡issue_comment trigger añadido!
 on:
   push:
     branches:
