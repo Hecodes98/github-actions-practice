@@ -1,0 +1,20 @@
+name: 'Hola mundo App Workflow'
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  paths:
+    - 'src/**'
+    - '**.yml'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v24
+      - name: Run python script
+        run: python src/hola_mundo.py
+  
