@@ -3,9 +3,11 @@ on:
   push:
     branches:
       - main
+      - aprendiendo-github-actions
   pull_request:
     branches:
       - main
+      - aprendiendo-github-actions
   paths:
     - 'src/**'
     - '**.yml'
