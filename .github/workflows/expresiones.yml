@@ -18,7 +18,6 @@ jobs:
     steps:
       - name: Adulto
         run: echo "¡Hola, ${{ inputs.name }}! Eres mayor de edad."
-  
   teenager:
     runs-on: ubuntu-latest
     if: ${{ inputs.age < 21 && inputs.age >= 13 }}
