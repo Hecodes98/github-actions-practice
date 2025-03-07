@@ -1,0 +1,35 @@
+name: Expressions
+run-name: ¡Expresiones añadidas!
+
+on:
+  workflow_dispatch:
+    inputs:
+      age:
+        type: number
+        required: true
+        description: 'Edad de la persona'
+      name:
+        type: string
+        required: true
+        description: 'Nombre de la persona'
+
+jobs:
+  adult:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.age >= 21 }}
+    steps:
+      - name: Adulto
+        run: echo "¡Hola, ${{ inputs.name }}! Eres mayor de edad."
+  
+  teenager:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.age < 21 && inputs.age >= 13 }}
+    steps:
+      - name: Adolescente
+        run: echo "¡Hola, ${{ inputs.name }}! Eres adolescente."
+  younger:
+    runs-on: ubuntu-latest
+    if: ${{ inputs.age < 13 }}
+    steps:
+      - name: Menor de edad
+        run: echo "¡Hola, ${{ inputs.name }}! Eres menor de edad."
