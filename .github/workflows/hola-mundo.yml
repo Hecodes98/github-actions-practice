@@ -1,0 +1,25 @@
+name: Hola mundo App Workflow
+run-name: ¡Estoy aprendiendo GitHub Actions!
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - '**.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - '**.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run python script
+        run: python src/hola-mundo.py
